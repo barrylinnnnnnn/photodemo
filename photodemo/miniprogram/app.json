@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/map/index",
+    "pages/female/index",
+    "pages/tips/index",
+    "pages/userConsole/userConsole", 
+    "pages/storageConsole/storageConsole",
+    "pages/deployFunctions/deployFunctions",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3498db",
+    "navigationBarTitleText": "摄影地图 for visitor",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

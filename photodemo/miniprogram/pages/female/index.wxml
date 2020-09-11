@@ -1,0 +1,53 @@
+<!--pages/female/index.wxml-->
+<map id="map"
+    longitude="{{longitude}}"
+    latitude="{{latitude}}" 
+    scale="14" 
+    bindcontroltap="controltap" 
+    markers="{{markers}}" 
+    bindmarkertap="markertap" 
+    bindregionchange="regionchange" 
+    show-location style="width: 100%; height: 1000px;"
+    bindtap="hiddeninfo">
+    <cover-view class="info" wx:if="{{showmodel}}" >
+        <cover-image 
+            class="img" 
+            wx:if="{{msg.url}}"
+            src="{{msg.url}}" 
+            binderror=""  
+            bindtap="showimage" 
+            data-id="{{msg._id}}" 
+            id="{{msg._id}}"
+            data-title="{{msg.fullurl}}">
+            
+        </cover-image>
+        <cover-view class="txt">
+            <cover-view class="text1">地点：{{msg.address}}</cover-view>
+            <cover-view class="text1">拍摄人：{{msg.photographer}}</cover-view>
+            <cover-view class="text1">推荐: {{msg.ambitus}}</cover-view>
+            <cover-view class="text1">推荐指数: {{msg.recommend}}</cover-view>
+        </cover-view>
+    </cover-view>
+
+    <cover-view class="switchbtn">
+        <cover-image class="leftbtn" src="./icon/男.png" bindtap="navigatormale">
+            
+        </cover-image>
+        <cover-image class="rightbtn" src="./icon/女.png" bindtap="navigatorfemale">
+            
+        </cover-image>
+    </cover-view>
+    <cover-view class="search">
+        <cover-image class="tips" src="./icon/提示.png" bindtap="showtips">
+            
+        </cover-image>
+        <cover-view class="searchview" scroll-top="0" bindtap="searchclick">
+            <cover-image class="searchbtn" src="./icon/search.png">
+            </cover-image>
+        </cover-view>  
+        <cover-image class="facouslocation" src="./icon/location.png" bindtap="returnlocation">
+            
+        </cover-image>  
+    </cover-view>
+</map>
+
